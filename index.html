@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced JavaScript Course</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2.5rem;
+      color: #1a1a1a;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* Container for cards */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 60px 20px;
+    }
+
+    /* Card Styles */
+    .card {
+      background: linear-gradient(135deg, #00bfff, #1e90ff);
+      color: #fff;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+      flex-grow: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .card h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Advanced JavaScript Course</h1>
+  <p class="subtitle">Explore 10 intensive weeks to master modern JavaScript</p>
+
+  <div class="cards-container">
+    <a href="week1.html" class="card">
+      <h2>Week 1</h2>
+      <p>JavaScript Deep Dive: Variables, Types & Debugging</p>
+    </a>
+
+    <a href="week2.html" class="card">
+      <h2>Week 2</h2>
+      <p>Functions, Scope & Closures: Advanced Patterns</p>
+    </a>
+
+    <a href="week3.html" class="card">
+      <h2>Week 3</h2>
+      <p>Objects, Arrays & Destructuring: Master Data Handling</p>
+    </a>
+
+    <a href="week4.html" class="card">
+      <h2>Week 4</h2>
+      <p>ES6+ Features: Modules, Symbols & Modern Syntax</p>
+    </a>
+
+    <a href="week5.html" class="card">
+      <h2>Week 5</h2>
+      <p>Asynchronous JS: Promises, Async/Await & API Calls</p>
+    </a>
+
+    <a href="week6.html" class="card">
+      <h2>Week 6</h2>
+      <p>DOM Advanced Manipulation: Dynamic & Interactive Pages</p>
+    </a>
+
+    <a href="week7.html" class="card">
+      <h2>Week 7</h2>
+      <p>Advanced Browser APIs: LocalStorage, Geolocation & Canvas</p>
+    </a>
+
+    <a href="week8.html" class="card">
+      <h2>Week 8</h2>
+      <p>Object-Oriented JS: Classes, Inheritance & Patterns</p>
+    </a>
+
+    <a href="week9.html" class="card">
+      <h2>Week 9</h2>
+      <p>Functional Programming & Patterns: Currying, Composition & Pub/Sub</p>
+    </a>
+
+    <a href="week10.html" class="card">
+      <h2>Week 10</h2>
+      <p>Mini Projects & Optimization: Build & Polish Real Apps</p>
+    </a>
+  </div>
+
+</body>
+</html>

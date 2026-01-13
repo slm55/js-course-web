@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1-апта: JavaScript негіздері</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f4f6f8; color:#333; line-height:1.6; }
+  header { background:#1e90ff; color:#fff; padding:30px 20px; text-align:center; }
+  header h1 { margin:0; font-size:2rem; }
+  main { max-width:1000px; margin:30px auto; padding:0 20px; }
+  section { background:#fff; padding:25px 20px; margin-bottom:30px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.05); }
+  h2 { color:#1e90ff; margin-top:0; }
+  pre { background:#f0f0f0; padding:15px; border-radius:8px; overflow-x:auto; }
+  .tasks { margin-top:15px; }
+  .task { margin:10px 0; padding:12px; border-left:5px solid #1e90ff; background:#f9f9f9; border-radius:6px; }
+  .task.easy { border-color:#28a745; }
+  .task.medium { border-color:#ffc107; }
+  .task.hard { border-color:#dc3545; }
+  .section-description { margin-bottom:15px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>1-апта: JavaScript негіздері</h1>
+  <p>HTML & CSS білетіндер үшін JavaScript-ке кіріспе</p>
+</header>
+
+<main>
+
+<!-- Section 0: JS дегеніміз не? -->
+<section>
+  <h2>JavaScript дегеніміз не?</h2>
+  <p class="section-description">
+    JavaScript — веб-беттерді интерактивті етуге арналған бағдарламалау тілі. HTML бетінің құрылымын өзгертпей, динамикалық өзгерістер жасауға мүмкіндік береді. 
+  </p>
+  <p>Мысалы, батырманы басқанда мәтінді өзгерту, калькулятор құру немесе API арқылы деректерді алу үшін JS қолданылады.</p>
+
+  <h3>Мысал:</h3>
+  <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1 id="greeting"&gt;Сәлем!&lt;/h1&gt;
+&lt;button onclick="changeText()"&gt;Басуды сынап көр&lt;/button&gt;
+
+&lt;script&gt;
+function changeText() {
+  document.getElementById("greeting").innerHTML = "Сәлем, JavaScript!";
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+
+  <div class="tasks">
+    <h3>Тапсырмалар:</h3>
+    <div class="task easy">1. Жай alert хабарламасын шығарыңыз.</div>
+    <div class="task easy">2. console.log арқылы өз атыңызды шығарыңыз.</div>
+    <div class="task medium">3. Батырма басқанда парақтағы мәтінді өзгертіңіз.</div>
+    <div class="task hard">4. HTML парағында екі батырма жасап, әрқайсысы әртүрлі мәтін шығаратындай код жазыңыз.</div>
+  </div>
+</section>
+
+<!-- Section 1: Айнымалылар -->
+<section>
+  <h2>Айнымалылар (Variables)</h2>
+  <p class="section-description">
+    Айнымалылар — деректерді уақытша сақтау үшін қолданылады. JavaScript-де үш негізгі түрі бар: <code>var</code>, <code>let</code>, <code>const</code>.
+  </p>
+
+  <h3>Мысалдар:</h3>
+  <pre>
+// var мысалы
+var name = "Ayan";
+console.log(name);
+
+// let мысалы
+let age = 25;
+age = 26; // қайта тағайындауға болады
+
+// const мысалы
+const pi = 3.14;
+// pi = 3.1415; // қатеге әкеледі
+  </pre>
+
+  <div class="tasks">
+    <h3>Тапсырмалар:</h3>
+    <div class="task easy">5. Өз атыңызды <code>let</code> арқылы айнымалыға сақтап, консольге шығарыңыз.</div>
+    <div class="task easy">6. <code>const</code> арқылы туған күніңізді сақтаңыз, оны қайта тағайындауға әрекет жасаңыз.</div>
+    <div class="task medium">7. Айнымалыға сан мен жол мәнін тағайындап, оларды қосып көріңіз.</div>
+    <div class="task hard">8. Қолданушыдан prompt арқылы жасын сұрап, 18-ден үлкен болса хабарлама шығарыңыз.</div>
+  </div>
+</section>
+
+<!-- Section 2: Мәлімет түрлері -->
+<section>
+  <h2>Мәлімет түрлері (Data Types)</h2>
+  <p class="section-description">
+    JavaScript-де негізгі мәлімет түрлері: <code>Number</code>, <code>String</code>, <code>Boolean</code>, <code>Null</code>, <code>Undefined</code>, <code>Symbol</code>, <code>Object</code>.
+  </p>
+
+  <h3>Мысалдар:</h3>
+  <pre>
+let name = "Ayan"; // String
+let age = 25;       // Number
+let isStudent = true; // Boolean
+let middleName = null; // Null
+let lastName;          // Undefined
+  </pre>
+
+  <div class="tasks">
+    <h3>Тапсырмалар:</h3>
+    <div class="task easy">9. 3 әртүрлі мәлімет түрін айнымалыда сақтап, консольге шығарыңыз.</div>
+    <div class="task medium">10. <code>null</code> және <code>undefined</code> айырмашылығын көрсететін код жазыңыз.</div>
+    <div class="task hard">11. Өз атыңыз, жасыңыз, хоббиіңізді объект ретінде сақтаңыз және консольге шығарыңыз.</div>
+  </div>
+</section>
+
+<!-- Section 3: Түрлерді ауыстыру -->
+<section>
+  <h2>Түрлерді ауыстыру (Type Conversion)</h2>
+  <p class="section-description">
+    JavaScript-де мәндерді бір типтен екінші типке ауыстыруға болады: String, Number, Boolean. Бұл кейде автоматты (implicit) түрде де жүреді.
+  </p>
+
+  <h3>Мысалдар:</h3>
+  <pre>
+let num = 42;
+let str = String(num); // "42"
+let bool = Boolean(str); // true
+
+let text = "123";
+let number = Number(text); // 123
+  </pre>
+
+  <div class="tasks">
+    <h3>Тапсырмалар:</h3>
+    <div class="task easy">12. Санды жолға, жолды санға айналдырыңыз.</div>
+    <div class="task medium">13. Boolean түрге бірнеше мәндерді ауыстырып, нәтижелерін бақылаңыз.</div>
+    <div class="task hard">14. Prompt арқылы сан сұрап, оны жолға, содан кейін керісінше түрге ауыстырып, нәтижесін көрсетіңіз.</div>
+  </div>
+</section>
+
+<!-- Section 4: Шаблон жолдар -->
+<section>
+  <h2>Шаблон жолдар (Template Literals)</h2>
+  <p class="section-description">
+    ES6-де `${}` көмегімен жолдарды динамикалық құрастыруға болады.
+  </p>
+
+  <h3>Мысал:</h3>
+  <pre>
+let name = "Ayan";
+let age = 25;
+console.log(`Менің атым ${name} және мен ${age} жастамын.`);
+  </pre>
+
+  <div class="tasks">
+    <h3>Тапсырмалар:</h3>
+    <div class="task easy">15. Өз атыңыз бен сүйікті түстеріңізді шаблон жол арқылы шығарыңыз.</div>
+    <div class="task medium">16. Қолданушыдан prompt арқылы атымын сұрап, шаблон жолмен хабар шығарыңыз.</div>
+    <div class="task hard">17. Бірнеше айнымалыны шаблон жолдар арқылы бір сөйлемге біріктіріңіз.</div>
+  </div>
+</section>
+
+<!-- Section 5: Debugging -->
+<section>
+  <h2>Debugging & Console</h2>
+  <p class="section-description">
+    Кодты тексеру және қателерді табу үшін <code>console.log()</code>, <code>console.warn()</code>, <code>console.error()</code> қолданылады.
+  </p>
+
+  <h3>Мысал:</h3>
+  <pre>
+let x = 5;
+console.log("x мәні:", x);
+console.warn("Бұл ескерту");
+console.error("Бұл қате");
+  </pre>
+
+  <div class="tasks">
+    <h3>Тапсырмалар:</h3>
+    <div class="task easy">18. Айнымалыға сан беріп, оны консольге шығарыңыз.</div>
+    <div class="task medium">19. Қате мәнін intentionally шығарып, console.error() арқылы тексеріңіз.</div>
+    <div class="task hard">20. Кодқа бірнеше console.log қосып, айнымалы мәндерін бақылаңыз, содан кейін қателікті табыңыз.</div>
+  </div>
+</section>
+
+<!-- Section 6: Mini Project -->
+<section>
+  <h2>Мини жобa: Жеке ақпарат картасы</h2>
+  <p class="section-description">
+    Осы аптада үйренгендерді біріктіріп, "Жеке ақпарат картасы" жасаңыз: аты, жасы және сүйікті түсі. Қолданушыдан ақпарат сұрап, оны экранға шығарыңыз.
+  </p>
+
+  <h3>Мысал жоспары:</h3>
+  <pre>
+let name = prompt("Атыңызды енгізіңіз:");
+let age = prompt("Жасыңызды енгізіңіз:");
+let color = prompt("Сүйікті түсті енгізіңіз:");
+
+console.log(`Сәлем, ${name}! Сіз ${age} жастасыз. Сүйікті түсіңіз: ${color}`);
+  </pre>
+
+  <div class="tasks">
+    <h3>Тапсырмалар:</h3>
+    <div class="task medium">21. Қолданушыдан бірнеше мән сұрап, оларды консольге шығарыңыз.</div>
+    <div class="task hard">22. Егер қолданушы жасын 18-ден төмен енгізсе, ескерту шығарыңыз.</div>
+    <div class="task hard">23. Түрін ауыстырып, жасын сан ретінде салыстырыңыз.</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
